@@ -14,6 +14,10 @@ public final class ExpressionParser {
     private ExpressionParser() {
     }
 
+    public static double calculate(String expression) {
+        return parse(new Expression(expression)).calculate();
+    }
+
     public static Node parse(Expression expression) {
 
         if (expression.isInParentheses()) {

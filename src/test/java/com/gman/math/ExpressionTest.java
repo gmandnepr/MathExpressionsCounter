@@ -1,6 +1,5 @@
 package com.gman.math;
 
-import com.gman.math.parser.Expression;
 import com.gman.math.parser.ExpressionParser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -75,6 +74,6 @@ public class ExpressionTest {
     @Test
     public void testCalculationWithExpression() {
 
-        assertEquals(expression, calculated, ExpressionParser.parse(new Expression(expression)).calculate(), 1e-6);
+        assertEquals(expression, calculated, ExpressionParser.calculate(expression), 1e-6);
     }
 }
